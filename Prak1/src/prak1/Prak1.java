@@ -11,9 +11,8 @@ package prak1;
  */
 public class Prak1 {
 
-    
     public static void main(String[] args) {
-        System.out.println("Coba");
+        System.out.println("Coa coba");
     }
     
 }
