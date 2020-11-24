@@ -11,38 +11,38 @@ public class Tugas_praktikum_if_else {
 
     public static void main(String[] args) 
     {
-        String input = JOptionPane.showInputDialog("Nilai IPA");
+        String input = JOptionPane.showInputDialog("Harga Airpod");
         double hasil = Double.parseDouble(input);
         
         
-        if(hasil > 70)
+        if(hasil > 1000000)
         {
-             System.out.println("nilai baik");
+             System.out.println("Harga Mahal");
         }
-        else if(hasil >= 50)
+        else if(hasil >= 200000)
         {
-            System.out.println("nilai cukup");
+            System.out.println("Harga Lumayan");
         }
         else
         {
-            System.out.println("nilai buruk");
+            System.out.println("Harga Murah");
         }
         
-        String nilai = JOptionPane.showInputDialog("Nilai Mat");
+        String nilai = JOptionPane.showInputDialog("Harga Laptop");
         double Pack = Double.parseDouble(nilai);
         
         
-        if(Pack > 70)
+        if(Pack > 10000000)
         {
-             System.out.println("nilai baik");
+             System.out.println("Laptop Mahal");
         }
-        else if(Pack >= 50)
+        else if(Pack >= 5000000)
         {
-            System.out.println("nilai cukup");
+            System.out.println("Laptop Sedang");
         }
         else
         {
-            System.out.println("nilai buruk");
+            System.out.println("Laptop Murah");
         }
     }
     
