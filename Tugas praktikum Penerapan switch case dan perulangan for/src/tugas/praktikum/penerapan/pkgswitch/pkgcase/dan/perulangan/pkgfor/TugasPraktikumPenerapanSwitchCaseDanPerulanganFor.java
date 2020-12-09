@@ -122,7 +122,7 @@ public class TugasPraktikumPenerapanSwitchCaseDanPerulanganFor {
             String Kerucut = JOptionPane.showInputDialog("Masukan Tinggi");
             Tinggi = Double.parseDouble(Kerucut);
             
-            Volume = 1/3 * Luas_Alas * Tinggi;
+            Volume = Luas_Alas * Tinggi * 1/3;
             
             System.out.println("Volume Kerucut = " + Volume);
             break;
