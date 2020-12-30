@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package uts;
 
 import javax.swing.JOptionPane;
@@ -13,9 +18,12 @@ public class UTS {
      */
     public static void main(String[] args) 
     {
+        
         String ulg = "y";
         while (ulg.equals("y"))
         {
+        Scanner ulang = new Scanner(System.in);
+         String ul=" ",lagi;
         int nomor;
         String Pencarian;
 
@@ -30,10 +38,8 @@ public class UTS {
         {
          case 1:
             boolean cek = true;
-            
-                String lg = "y";
-                while (lg.equals("y"))
-                {
+            String ulangi;
+            do {
                 int min, max;
                 int count = 0;
                 String Nilai = JOptionPane.showInputDialog("Nilai awal: ");
@@ -45,16 +51,15 @@ public class UTS {
                         System.out.println(" " + i);
                         count += i;
                     }
-                    
-                    else {
-                        String Inputan = JOptionPane.showInputDialog("Ulangi Lagi");
-                        String Lagi = JOptionPane.showInputDialog("Apakah anda ingin mengulang? Pilih Y or N");
-                        lg = String.valueOf(lg);
-                    }
-                 }
-                System.out.println("hasil penjumlahan semua angka yang habis dibagi 3 dan 5 \nyang berada diantara " + min + "-" + max + " adalah " + count);
                 }
-                
+                System.out.println("hasil penjumlahan semua angka yang habis dibagi 3 dan 5 \nyang berada diantara " + min + "-" + max + " adalah " + count);
+                String Inputan = JOptionPane.showInputDialog("Ulangi Lagi Y/N");
+                ulangi = String.valueOf(Inputan);
+                   if (ulangi.equalsIgnoreCase("N"))
+                   {
+                     cek = false;
+                   }
+            } while (cek);
         break;
          case 2:
              Scanner input = new Scanner(System.in);
@@ -97,9 +102,8 @@ public class UTS {
             System.out.println("Pilihan anda tidak ada");
             break;
         }
-         System.out.println("=====================================");
-        String Lagi = JOptionPane.showInputDialog("Apakah anda ingin mengulang? Pilih Y or N");
-        ulg = String.valueOf(ulg);
+         System.out.print("Apakah anda ingin mengulang ? y/n  = ");
+         ulg = ulang.next();
         }
     }
     
