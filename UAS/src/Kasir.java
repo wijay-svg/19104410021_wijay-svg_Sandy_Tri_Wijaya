@@ -223,8 +223,18 @@ public class Kasir extends javax.swing.JFrame {
         });
 
         Hapus.setText("Hapus Semua");
+        Hapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HapusActionPerformed(evt);
+            }
+        });
 
         exit.setText("jButton1");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -527,9 +537,13 @@ public class Kasir extends javax.swing.JFrame {
            Input12.setText(""+jumlah2);
            Input9.setText(""+des);
        }
-       double Pembayaran,hasil4,c5;
+       double a9,b9,c9,Pembayaran,hasil4,c5,pembayaran1;
        
-       Pembayaran =  jumlah + c1 + jumlah2;
+       a9 = Double.valueOf(Input10.getText());
+       b9 = Double.valueOf(Input11.getText());
+       c9 = Double.valueOf(Input12.getText());
+       
+       Pembayaran = a9 + b9 + c9;
        Input13.setText(""+Pembayaran);
        hasil4 = (Pembayaran - (Pembayaran * 5)/100);
        if(Pembayaran > 1000000){
@@ -542,12 +556,39 @@ public class Kasir extends javax.swing.JFrame {
     }//GEN-LAST:event_totalActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        double c7,c8;
-       
-       c7 = Integer.parseInt(Input16.getText());
-       c8 = c7 - Input;
-       Input17.setText(""+c8);
+      double a7,b7,c7;
+      
+      a7 = Integer.valueOf(Input16.getText());
+      b7 = Double.valueOf(Input15.getText());
+      
+      c7 = a7 - b7;
+      
+      Input17.setText(""+c7);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void HapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusActionPerformed
+        Input1.setText("");
+       Input2.setText("");
+       Input3.setText("");
+       Input4.setText("");
+       Input5.setText("");
+       Input6.setText("");
+       Input7.setText("");
+       Input8.setText("");
+       Input9.setText("");
+       Input10.setText("");
+       Input11.setText("");
+       Input12.setText("");
+       Input13.setText("");
+       Input14.setText("");
+       Input15.setText("");
+       Input16.setText("");
+       Input17.setText("");
+    }//GEN-LAST:event_HapusActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        dispose();
+    }//GEN-LAST:event_exitActionPerformed
 
     /**
      * @param args the command line guments
